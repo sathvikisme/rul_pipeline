@@ -1,0 +1,112 @@
+[
+  {
+    "model": "LightGBM",
+    "param_grid": "{\"n_estimators\": [100, 200], \"max_depth\": [3, 5, 7], \"learning_rate\": [0.05, 0.1]}",
+    "best_params": "{\"learning_rate\": 0.05, \"max_depth\": 7, \"n_estimators\": 200}",
+    "grid_scoring_metric": "neg_mean_squared_error",
+    "cv_best_score": -245.31308407911857,
+    "cv_r2_mean": 0.8586416864618925,
+    "cv_r2_std": 0.007427110142946923,
+    "cv_mse_mean": 245.31308407911857,
+    "cv_mse_std": 11.517860487696968
+  },
+  {
+    "model": "CatBoost",
+    "param_grid": "{\"iterations\": [100, 200], \"depth\": [4, 6], \"learning_rate\": [0.05, 0.1]}",
+    "best_params": "{\"depth\": 6, \"iterations\": 200, \"learning_rate\": 0.1}",
+    "grid_scoring_metric": "neg_mean_squared_error",
+    "cv_best_score": -241.5230366225447,
+    "cv_r2_mean": 0.8608324842044031,
+    "cv_r2_std": 0.006596317220296729,
+    "cv_mse_mean": 241.5230366225447,
+    "cv_mse_std": 10.205343760756179
+  },
+  {
+    "model": "GradientBoosting",
+    "param_grid": "{\"n_estimators\": [100, 200], \"max_depth\": [2, 3, 4], \"learning_rate\": [0.05, 0.1]}",
+    "best_params": "{\"learning_rate\": 0.1, \"max_depth\": 4, \"n_estimators\": 200}",
+    "grid_scoring_metric": "neg_mean_squared_error",
+    "cv_best_score": -248.55642435841295,
+    "cv_r2_mean": 0.8567830910428658,
+    "cv_r2_std": 0.007786392674414052,
+    "cv_mse_mean": 248.55642435841295,
+    "cv_mse_std": 12.572240209522821
+  },
+  {
+    "model": "XGBoost",
+    "param_grid": "{\"n_estimators\": [100, 200], \"max_depth\": [3, 5, 7], \"learning_rate\": [0.05, 0.1]}",
+    "best_params": "{\"learning_rate\": 0.05, \"max_depth\": 5, \"n_estimators\": 200}",
+    "grid_scoring_metric": "neg_mean_squared_error",
+    "cv_best_score": -246.33721923828125,
+    "cv_r2_mean": 0.8580583691596985,
+    "cv_r2_std": 0.0071440824999733366,
+    "cv_mse_mean": 246.33721923828125,
+    "cv_mse_std": 11.222146992430813
+  },
+  {
+    "model": "SVM",
+    "param_grid": "{\"C\": [1, 10, 100], \"epsilon\": [0.1, 0.5]}",
+    "best_params": "{\"C\": 100, \"epsilon\": 0.5}",
+    "grid_scoring_metric": "neg_mean_squared_error",
+    "cv_best_score": -308.56548388343657,
+    "cv_r2_mean": 0.8222568064065856,
+    "cv_r2_std": 0.007831155630868834,
+    "cv_mse_mean": 308.56548388343657,
+    "cv_mse_std": 14.1833548230183
+  },
+  {
+    "model": "KNN",
+    "param_grid": "{\"n_neighbors\": [5, 10, 15, 20], \"weights\": [\"uniform\", \"distance\"]}",
+    "best_params": "{\"n_neighbors\": 20, \"weights\": \"distance\"}",
+    "grid_scoring_metric": "neg_mean_squared_error",
+    "cv_best_score": -292.8179404841188,
+    "cv_r2_mean": 0.8313023796352514,
+    "cv_r2_std": 0.00867188429124869,
+    "cv_mse_mean": 292.8179404841188,
+    "cv_mse_std": 14.719712344018706
+  },
+  {
+    "model": "LinearRegression",
+    "param_grid": "{\"fit_intercept\": [true, false], \"positive\": [false, true]}",
+    "best_params": "{\"fit_intercept\": true, \"positive\": false}",
+    "grid_scoring_metric": "neg_mean_squared_error",
+    "cv_best_score": -400.6458092370307,
+    "cv_r2_mean": 0.7692094134237457,
+    "cv_r2_std": 0.005282623881004802,
+    "cv_mse_mean": 400.6458092370307,
+    "cv_mse_std": 10.024227125138
+  },
+  {
+    "model": "Ridge",
+    "param_grid": "{\"alpha\": [0.1, 1.0, 10.0, 100.0], \"solver\": [\"auto\"]}",
+    "best_params": "{\"alpha\": 100.0, \"solver\": \"auto\"}",
+    "grid_scoring_metric": "neg_mean_squared_error",
+    "cv_best_score": -400.6119827568623,
+    "cv_r2_mean": 0.7692292139559539,
+    "cv_r2_std": 0.005301269746523639,
+    "cv_mse_mean": 400.6119827568623,
+    "cv_mse_std": 10.076861850614836
+  },
+  {
+    "model": "BayesianRidge",
+    "param_grid": "{\"alpha_1\": [1e-06, 1e-05, 0.0001], \"lambda_1\": [1e-06, 1e-05, 0.0001]}",
+    "best_params": "{\"alpha_1\": 1e-06, \"lambda_1\": 0.0001}",
+    "grid_scoring_metric": "neg_mean_squared_error",
+    "cv_best_score": -400.62383254915665,
+    "cv_r2_mean": 0.7692222749585131,
+    "cv_r2_std": 0.005294072156452899,
+    "cv_mse_mean": 400.62383254915665,
+    "cv_mse_std": 10.057174708471218
+  },
+  {
+    "model": "MLP",
+    "param_grid": "{\"hidden_layer_sizes\": [[50], [100], [50, 50]], \"alpha\": [0.0001, 0.001], \"learning_rate_init\": [0.001, 0.01]}",
+    "best_params": "{\"alpha\": 0.0001, \"hidden_layer_sizes\": [50, 50], \"learning_rate_init\": 0.01}",
+    "grid_scoring_metric": "neg_mean_squared_error",
+    "cv_best_score": -242.33927192232846,
+    "cv_r2_mean": 0.8603722299924812,
+    "cv_r2_std": 0.00642081630264847,
+    "cv_mse_mean": 242.33927192232846,
+    "cv_mse_std": 10.27079490231559
+  }
+]

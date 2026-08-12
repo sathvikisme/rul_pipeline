@@ -1,0 +1,125 @@
+=== Statistical validation suite (MSE, 5-fold CV) ===
+Models: ['LightGBM', 'CatBoost', 'GradientBoosting', 'XGBoost', 'SVM', 'KNN', 'LinearRegression', 'Ridge', 'BayesianRidge', 'MLP']
+n per model (folds): [5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+
+-- Shapiro-Wilk (normality per model) --
+  LightGBM             W=0.8103  p=0.0980  [OK]
+  CatBoost             W=0.8292  p=0.1372  [OK]
+  GradientBoosting     W=0.8554  p=0.2121  [OK]
+  XGBoost              W=0.8845  p=0.3304  [OK]
+  SVM                  W=0.9027  p=0.4250  [OK]
+  KNN                  W=0.9431  p=0.6877  [OK]
+  LinearRegression     W=0.8795  p=0.3070  [OK]
+  Ridge                W=0.8807  p=0.3123  [OK]
+  BayesianRidge        W=0.8802  p=0.3102  [OK]
+  MLP                  W=0.9221  p=0.5437  [OK]
+
+-- Levene's test (variance homogeneity across all 10 models) --
+  F=0.1565  p=0.9971  [OK]
+
+
+-- One-way ANOVA --
+  F=150.7163  p=0.000000  (significant difference exists)
+
+-- Tukey HSD post-hoc (full pairwise table) --
+             Multiple Comparison of Means - Tukey HSD, FWER=0.05             
+=============================================================================
+     group1           group2       meandiff p-adj    lower     upper   reject
+-----------------------------------------------------------------------------
+   BayesianRidge         CatBoost -159.1008    0.0 -186.5784 -131.6232   True
+   BayesianRidge GradientBoosting -152.0674    0.0  -179.545 -124.5898   True
+   BayesianRidge              KNN -107.8059    0.0 -135.2835  -80.3283   True
+   BayesianRidge         LightGBM -155.3107    0.0 -182.7884 -127.8331   True
+   BayesianRidge LinearRegression     0.022    1.0  -27.4556   27.4996  False
+   BayesianRidge              MLP -158.2846    0.0 -185.7622 -130.8069   True
+   BayesianRidge            Ridge   -0.0118    1.0  -27.4895   27.4658  False
+   BayesianRidge              SVM  -92.0583    0.0  -119.536  -64.5807   True
+   BayesianRidge          XGBoost -154.2866    0.0 -181.7642  -126.809   True
+        CatBoost GradientBoosting    7.0334  0.997  -20.4442    34.511  False
+        CatBoost              KNN   51.2949    0.0   23.8173   78.7725   True
+        CatBoost         LightGBM      3.79    1.0  -23.6876   31.2677  False
+        CatBoost LinearRegression  159.1228    0.0  131.6452  186.6004   True
+        CatBoost              MLP    0.8162    1.0  -26.6614   28.2938  False
+        CatBoost            Ridge  159.0889    0.0  131.6113  186.5666   True
+        CatBoost              SVM   67.0424    0.0   39.5648   94.5201   True
+        CatBoost          XGBoost    4.8142 0.9998  -22.6634   32.2918  False
+GradientBoosting              KNN   44.2615 0.0001   16.7839   71.7391   True
+GradientBoosting         LightGBM   -3.2433    1.0   -30.721   24.2343  False
+GradientBoosting LinearRegression  152.0894    0.0  124.6118   179.567   True
+GradientBoosting              MLP   -6.2172 0.9988  -33.6948   21.2605  False
+GradientBoosting            Ridge  152.0556    0.0  124.5779  179.5332   True
+GradientBoosting              SVM   60.0091    0.0   32.5314   87.4867   True
+GradientBoosting          XGBoost   -2.2192    1.0  -29.6968   25.2584  False
+             KNN         LightGBM  -47.5049    0.0  -74.9825  -20.0272   True
+             KNN LinearRegression  107.8279    0.0   80.3503  135.3055   True
+             KNN              MLP  -50.4787    0.0  -77.9563  -23.0011   True
+             KNN            Ridge   107.794    0.0   80.3164  135.2717   True
+             KNN              SVM   15.7475  0.657  -11.7301   43.2252  False
+             KNN          XGBoost  -46.4807 0.0001  -73.9583  -19.0031   True
+        LightGBM LinearRegression  155.3327    0.0  127.8551  182.8103   True
+        LightGBM              MLP   -2.9738    1.0  -30.4514   24.5038  False
+        LightGBM            Ridge  155.2989    0.0  127.8213  182.7765   True
+        LightGBM              SVM   63.2524    0.0   35.7748     90.73   True
+        LightGBM          XGBoost    1.0241    1.0  -26.4535   28.5017  False
+LinearRegression              MLP -158.3065    0.0 -185.7842 -130.8289   True
+LinearRegression            Ridge   -0.0338    1.0  -27.5114   27.4438  False
+LinearRegression              SVM  -92.0803    0.0 -119.5579  -64.6027   True
+LinearRegression          XGBoost -154.3086    0.0 -181.7862  -126.831   True
+             MLP            Ridge  158.2727    0.0  130.7951  185.7503   True
+             MLP              SVM   66.2262    0.0   38.7486   93.7038   True
+             MLP          XGBoost    3.9979    1.0  -23.4797   31.4756  False
+           Ridge              SVM  -92.0465    0.0 -119.5241  -64.5689   True
+           Ridge          XGBoost -154.2748    0.0 -181.7524 -126.7971   True
+             SVM          XGBoost  -62.2283    0.0  -89.7059  -34.7507   True
+-----------------------------------------------------------------------------
+
+-- Kruskal-Wallis (non-parametric one-way, rank-based) --
+  H=41.9600  p=0.000003  (significant difference exists)
+
+-- Dunn's test post-hoc (Holm-corrected, full pairwise table) --
+          group1           group2         z    p_raw   p_holm  reject
+        LightGBM         CatBoost  0.412168 0.680216 1.000000   False
+        LightGBM GradientBoosting -0.325396 0.744882 1.000000   False
+        LightGBM          XGBoost -0.130158 0.896441 1.000000   False
+        LightGBM              SVM -1.995760 0.045960 1.000000   False
+        LightGBM              KNN -1.713751 0.086575 1.000000   False
+        LightGBM LinearRegression -3.232264 0.001228 0.047897    True
+        LightGBM            Ridge -3.188878 0.001428 0.052846   False
+        LightGBM    BayesianRidge -3.210571 0.001325 0.050339   False
+        LightGBM              MLP  0.260317 0.794620 1.000000   False
+        CatBoost GradientBoosting -0.737564 0.460780 1.000000   False
+        CatBoost          XGBoost -0.542326 0.587594 1.000000   False
+        CatBoost              SVM -2.407928 0.016043 0.481300   False
+        CatBoost              KNN -2.125918 0.033510 0.938281   False
+        CatBoost LinearRegression -3.644432 0.000268 0.012059    True
+        CatBoost            Ridge -3.601046 0.000317 0.013628    True
+        CatBoost    BayesianRidge -3.622739 0.000292 0.012826    True
+        CatBoost              MLP -0.151851 0.879304 1.000000   False
+GradientBoosting          XGBoost  0.195237 0.845207 1.000000   False
+GradientBoosting              SVM -1.670365 0.094847 1.000000   False
+GradientBoosting              KNN -1.388355 0.165029 1.000000   False
+GradientBoosting LinearRegression -2.906868 0.003651 0.120472   False
+GradientBoosting            Ridge -2.863482 0.004190 0.129894   False
+GradientBoosting    BayesianRidge -2.885175 0.003912 0.125183   False
+GradientBoosting              MLP  0.585712 0.558069 1.000000   False
+         XGBoost              SVM -1.865602 0.062097 1.000000   False
+         XGBoost              KNN -1.583592 0.113287 1.000000   False
+         XGBoost LinearRegression -3.102106 0.001921 0.069174   False
+         XGBoost            Ridge -3.058719 0.002223 0.075577   False
+         XGBoost    BayesianRidge -3.080413 0.002067 0.072350   False
+         XGBoost              MLP  0.390475 0.696185 1.000000   False
+             SVM              KNN  0.282010 0.777936 1.000000   False
+             SVM LinearRegression -1.236504 0.216271 1.000000   False
+             SVM            Ridge -1.193118 0.232823 1.000000   False
+             SVM    BayesianRidge -1.214811 0.224438 1.000000   False
+             SVM              MLP  2.256077 0.024066 0.697909   False
+             KNN LinearRegression -1.518513 0.128885 1.000000   False
+             KNN            Ridge -1.475127 0.140178 1.000000   False
+             KNN    BayesianRidge -1.496820 0.134440 1.000000   False
+             KNN              MLP  1.974067 0.048374 1.000000   False
+LinearRegression            Ridge  0.043386 0.965394 1.000000   False
+LinearRegression    BayesianRidge  0.021693 0.982693 1.000000   False
+LinearRegression              MLP  3.492580 0.000478 0.020092    True
+           Ridge    BayesianRidge -0.021693 0.982693 1.000000   False
+           Ridge              MLP  3.449194 0.000562 0.022490    True
+   BayesianRidge              MLP  3.470887 0.000519 0.021268    True

@@ -1,0 +1,42 @@
+{
+  "fixed_weighted_average": {
+    "strong_model": "XGBoost",
+    "strong_weight": 0.7,
+    "second_model": "MLP",
+    "second_weight": 0.3,
+    "selection_metric": "official test-set R2 (results/tables/official_split_metrics.csv from models.py run)",
+    "selection_r2_values": {
+      "XGBoost": 0.677643,
+      "MLP": 0.677473,
+      "CatBoost_for_reference": 0.675919,
+      "LightGBM_for_reference": 0.67537
+    }
+  },
+  "stacking": {
+    "base_learners": [
+      "LightGBM",
+      "CatBoost",
+      "XGBoost",
+      "GradientBoosting",
+      "MLP"
+    ],
+    "base_learner_selection_rationale": "Top performance tier by both CV R2 (~0.857-0.861) and official test R2 (~0.674-0.678); excludes KNN/SVM (weaker tier, CV R2 ~0.82-0.83) and Ridge/BayesianRidge/LinearRegression (near-identical to each other, CV R2 ~0.769 - would add redundant collinear signal, not diversity).",
+    "meta_learner": "sklearn.linear_model.Ridge",
+    "meta_learner_param_grid": {
+      "alpha": [
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0
+      ]
+    },
+    "meta_learner_best_params": {
+      "alpha": 100.0
+    },
+    "meta_learner_training_data": "OOF predictions of the 5 base learners on the TRAINING set only, generated via cross_val_predict(cv=KFold(5, shuffle=True, random_state=42)) - genuine out-of-fold, never in-fold/raw-features. See results/tables/stacking_oof_predictions_train.csv.",
+    "test_time_meta_features": "Base-learner predictions on test.csv from the FULL-TRAIN-fit base models (results/models/{name}.joblib, from models.py) fed into the OOF-fit ridge meta-learner.",
+    "random_seed": 42,
+    "kfold": "KFold(n_splits=5, shuffle=True, random_state=42)"
+  }
+}

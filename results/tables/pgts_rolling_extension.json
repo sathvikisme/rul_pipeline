@@ -1,0 +1,24 @@
+{
+  "baseline_no_rolling": {
+    "n_features": 18,
+    "kfold_r2_mean": 0.8580583691596985,
+    "kfold_r2_std": 0.0071440824999733366,
+    "kfold_mse_mean": 246.33721923828125,
+    "pgts10_r2_mean": 0.841992974281311,
+    "pgts10_r2_std": 0.039015846181206626,
+    "pgts10_mse_mean": 273.1913238525391,
+    "kfold_pgts_r2_gap": 0.01606539487838743,
+    "pgts_mse_pct_vs_kfold": 10.901358997757436
+  },
+  "with_rolling_w5": {
+    "n_features": 60,
+    "kfold_r2_mean": 0.8833395957946777,
+    "kfold_r2_std": 0.006427217747666673,
+    "kfold_mse_mean": 202.47463684082032,
+    "pgts10_r2_mean": 0.8441258311271668,
+    "pgts10_r2_std": 0.03954890893782999,
+    "pgts10_mse_mean": 269.5535125732422,
+    "kfold_pgts_r2_gap": 0.03921376466751092,
+    "pgts_mse_pct_vs_kfold": 33.129520210058374
+  }
+}
