@@ -82,10 +82,8 @@ Two ensemble variants, both built on top of the tuned base learners:
 ## 4. Results — official split **[Reproduction]**
 
 Evaluated once on the true held-out test set (100 engines never seen during
-training). PHM08 RUL Score computed via `.claude/skills/phm08-scoring/score.py`
+training).
 (sign convention: `d = predicted − true`; late predictions penalized more
-heavily — see that skill's `SKILL.md` before comparing across papers, which
-don't all use the same convention).
 
 | Model | R² | RMSE | MSE | MAE | PHM08 RUL Score |
 |---|---:|---:|---:|---:|---:|
@@ -112,11 +110,11 @@ This reproduction's best result — the Stacking ensemble at **RMSE = 15.55,
 RUL Score ≈ 76,738** — falls well short of that. We do **not** paper over
 this gap. Candidate explanations, investigated where possible:
 
-- **Not our own train/test leakage** — §5's PGTS audit (an adversarial
+- **Not our own train/test leakage** — PGTS audit (an adversarial
   re-check specifically designed to catch this) found the official split
   is *not* inflated by grouping issues; if anything, our official-split MSE
   is slightly *better* than the leakage-safe PGTS estimate on the training
-  engines (see §5). So the gap to the paper isn't explained by leakage in
+  engines. So the gap to the paper isn't explained by leakage in
   *this* codebase's official-split evaluation.
 - **Likely explanations, not yet isolated**: differing preprocessing
   choices (e.g. a different RUL cap value, different scaler, or different
@@ -129,7 +127,7 @@ this gap. Candidate explanations, investigated where possible:
   attribute the gap definitively, and we're not asserting a specific cause
   we haven't verified.
 - **What we can say with confidence**: our result is real, reproducible
-  (fixed seeds throughout), and independently statistically validated (§6).
+  (fixed seeds throughout), and independently statistically validated.
 
 ## 5. Statistical validation **[Reproduction of methodology, extension in rigor]**
 
