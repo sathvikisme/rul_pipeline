@@ -1,0 +1,111 @@
+model_a,model_b,metric,mean_delta,permutation_p,wilcoxon_p,p_corrected,statistically_significant,practically_significant,verdict
+BayesianRidge,CatBoost,R2,-0.0785264734034927,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+BayesianRidge,GradientBoosting,R2,-0.07637345780796981,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+BayesianRidge,KNN,R2,-0.07016181866219229,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+BayesianRidge,LightGBM,R2,-0.07811523455829177,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+BayesianRidge,LinearRegression,R2,4.5306811858658594e-06,0.8106189381061893,0.625,1.0,False,False,no significant difference detected
+BayesianRidge,MLP,R2,-0.07567054319862103,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+BayesianRidge,Ridge,R2,-1.140822552059273e-05,0.7476252374762524,0.625,1.0,False,False,no significant difference detected
+BayesianRidge,SVM,R2,-0.07039228091957073,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+BayesianRidge,XGBoost,R2,-0.07699080215754164,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+BayesianRidge,StackingEnsemble,R2,-0.07995624996317126,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+CatBoost,GradientBoosting,R2,0.0021530155955229004,0.506049395060494,0.625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+CatBoost,KNN,R2,0.008364654741300414,0.12268773122687732,0.125,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+CatBoost,LightGBM,R2,0.0004112388452009341,0.7519248075192481,0.8125,1.0,False,False,no significant difference detected
+CatBoost,LinearRegression,R2,0.07853100408467857,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+CatBoost,MLP,R2,0.0028559302048716704,0.5549445055494451,0.625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+CatBoost,Ridge,R2,0.0785150651779721,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+CatBoost,SVM,R2,0.008134192483921976,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+CatBoost,XGBoost,R2,0.0015356712459510646,0.5051494850514948,0.4375,1.0,False,False,no significant difference detected
+CatBoost,StackingEnsemble,R2,-0.0014297765596785529,0.3735626437356264,0.4375,1.0,False,False,no significant difference detected
+GradientBoosting,KNN,R2,0.006211639145777515,0.25037496250374963,0.3125,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+GradientBoosting,LightGBM,R2,-0.001741776750321966,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+GradientBoosting,LinearRegression,R2,0.07637798848915567,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+GradientBoosting,MLP,R2,0.0007029146093487703,0.8106189381061893,0.8125,1.0,False,False,no significant difference detected
+GradientBoosting,Ridge,R2,0.07636204958244922,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+GradientBoosting,SVM,R2,0.005981176888399076,0.12268773122687732,0.125,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+GradientBoosting,XGBoost,R2,-0.0006173443495718356,0.6216378362163784,0.625,1.0,False,False,no significant difference detected
+GradientBoosting,StackingEnsemble,R2,-0.003582792155201453,0.12478752124787522,0.125,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+KNN,LightGBM,R2,-0.007953415896099481,0.18698130186981302,0.1875,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+KNN,LinearRegression,R2,0.07016634934337815,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+KNN,MLP,R2,-0.005508724536428744,0.4320567943205679,0.625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+KNN,Ridge,R2,0.0701504104366717,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+KNN,SVM,R2,-0.00023046225737843873,1.0,1.0,1.0,False,False,no significant difference detected
+KNN,XGBoost,R2,-0.00682898349534935,0.18698130186981302,0.1875,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+KNN,StackingEnsemble,R2,-0.009794431300978967,0.12268773122687732,0.125,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+LightGBM,LinearRegression,R2,0.07811976523947764,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+LightGBM,MLP,R2,0.0024446913596707365,0.4320567943205679,0.625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+LightGBM,Ridge,R2,0.07810382633277117,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+LightGBM,SVM,R2,0.007722953638721042,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+LightGBM,XGBoost,R2,0.0011244324007501304,0.31366863313668636,0.3125,1.0,False,False,no significant difference detected
+LightGBM,StackingEnsemble,R2,-0.0018410154048794868,0.31586841315868414,0.3125,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+LinearRegression,MLP,R2,-0.0756750738798069,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+LinearRegression,Ridge,R2,-1.5938906706458587e-05,0.7476252374762524,0.625,1.0,False,False,no significant difference detected
+LinearRegression,SVM,R2,-0.07039681160075659,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+LinearRegression,XGBoost,R2,-0.0769953328387275,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+LinearRegression,StackingEnsemble,R2,-0.07996078064435712,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+MLP,Ridge,R2,0.07565913497310044,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+MLP,SVM,R2,0.005278262279050305,0.30696930306969306,0.3125,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+MLP,XGBoost,R2,-0.001320258958920606,0.7481251874812519,0.8125,1.0,False,False,no significant difference detected
+MLP,StackingEnsemble,R2,-0.004285706764550224,0.12448755124487551,0.125,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+Ridge,SVM,R2,-0.07038087269405013,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+Ridge,XGBoost,R2,-0.07697939393202105,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+Ridge,StackingEnsemble,R2,-0.07994484173765067,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+SVM,XGBoost,R2,-0.006598521237970912,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+SVM,StackingEnsemble,R2,-0.009563969043600528,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+XGBoost,StackingEnsemble,R2,-0.0029654478056296172,0.18718128187181282,0.1875,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+BayesianRidge,CatBoost,MSE,136.3708971186257,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+BayesianRidge,GradientBoosting,MSE,132.63210086403092,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+BayesianRidge,KNN,MSE,121.84477854303523,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+BayesianRidge,LightGBM,MSE,135.65669276413578,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+BayesianRidge,LinearRegression,MSE,-0.007870388717026344,0.8106189381061893,0.625,1.0,False,False,no significant difference detected
+BayesianRidge,MLP,MSE,131.41105180554163,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+BayesianRidge,Ridge,MSE,0.01981811174489394,0.7476252374762524,0.625,1.0,False,False,no significant difference detected
+BayesianRidge,SVM,MSE,122.24483002373158,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+BayesianRidge,XGBoost,MSE,133.70401527948985,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+BayesianRidge,StackingEnsemble,MSE,138.85370236426598,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+CatBoost,GradientBoosting,MSE,-3.7387962545947517,0.506049395060494,0.625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+CatBoost,KNN,MSE,-14.526118575590454,0.12268773122687732,0.125,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+CatBoost,LightGBM,MSE,-0.7142043544898968,0.7519248075192481,0.8125,1.0,False,False,no significant difference detected
+CatBoost,LinearRegression,MSE,-136.37876750734273,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+CatBoost,MLP,MSE,-4.959845313084048,0.5549445055494451,0.625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+CatBoost,Ridge,MSE,-136.3510790068808,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+CatBoost,SVM,MSE,-14.12606709489412,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+CatBoost,XGBoost,MSE,-2.666881839135857,0.5051494850514948,0.4375,1.0,False,False,no significant difference detected
+CatBoost,StackingEnsemble,MSE,2.482805245640293,0.3735626437356264,0.4375,1.0,False,False,no significant difference detected
+GradientBoosting,KNN,MSE,-10.787322320995703,0.25037496250374963,0.3125,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+GradientBoosting,LightGBM,MSE,3.0245919001048547,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+GradientBoosting,LinearRegression,MSE,-132.63997125274796,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+GradientBoosting,MLP,MSE,-1.2210490584892966,0.8106189381061893,0.8125,1.0,False,False,no significant difference detected
+GradientBoosting,Ridge,MSE,-132.61228275228603,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+GradientBoosting,SVM,MSE,-10.387270840299369,0.12268773122687732,0.125,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+GradientBoosting,XGBoost,MSE,1.0719144154588947,0.6216378362163784,0.625,1.0,False,False,no significant difference detected
+GradientBoosting,StackingEnsemble,MSE,6.221601500235044,0.12478752124787522,0.125,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+KNN,LightGBM,MSE,13.811914221100556,0.18698130186981302,0.1875,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+KNN,LinearRegression,MSE,-121.85264893175227,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+KNN,MLP,MSE,9.566273262506405,0.4320567943205679,0.625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+KNN,Ridge,MSE,-121.82496043129034,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+KNN,SVM,MSE,0.4000514806963338,1.0,1.0,1.0,False,False,no significant difference detected
+KNN,XGBoost,MSE,11.859236736454596,0.18698130186981302,0.1875,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+KNN,StackingEnsemble,MSE,17.008923821230745,0.12268773122687732,0.125,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+LightGBM,LinearRegression,MSE,-135.66456315285282,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+LightGBM,MLP,MSE,-4.2456409585941515,0.4320567943205679,0.625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+LightGBM,Ridge,MSE,-135.6368746523909,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+LightGBM,SVM,MSE,-13.411862740404223,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+LightGBM,XGBoost,MSE,-1.9526774846459602,0.31366863313668636,0.3125,1.0,False,False,no significant difference detected
+LightGBM,StackingEnsemble,MSE,3.1970096001301895,0.31586841315868414,0.3125,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+LinearRegression,MLP,MSE,131.41892219425864,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+LinearRegression,Ridge,MSE,0.027688500461920285,0.7476252374762524,0.625,1.0,False,False,no significant difference detected
+LinearRegression,SVM,MSE,122.2527004124486,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+LinearRegression,XGBoost,MSE,133.71188566820686,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+LinearRegression,StackingEnsemble,MSE,138.86157275298302,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+MLP,Ridge,MSE,-131.39123369379675,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+MLP,SVM,MSE,-9.166221781810071,0.30696930306969306,0.3125,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+MLP,XGBoost,MSE,2.292963473948191,0.7481251874812519,0.8125,1.0,False,False,no significant difference detected
+MLP,StackingEnsemble,MSE,7.442650558724341,0.12448755124487551,0.125,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+Ridge,SVM,MSE,122.22501191198667,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+Ridge,XGBoost,MSE,133.6841971677449,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+Ridge,StackingEnsemble,MSE,138.8338842525211,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+SVM,XGBoost,MSE,11.459185255758262,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+SVM,StackingEnsemble,MSE,16.60887234053441,0.060993900609939006,0.0625,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)
+XGBoost,StackingEnsemble,MSE,5.14968708477615,0.18718128187181282,0.1875,1.0,False,True,not statistically confirmed despite >=1% MSE effect (likely underpowered at n=5 folds)

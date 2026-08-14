@@ -1,0 +1,57 @@
+{
+  "all_match": true,
+  "checks": {
+    "LightGBM": {
+      "R2": {
+        "reference": 0.6800335570887784,
+        "reconstructed": 0.6800335570887784,
+        "abs_diff": 0.0,
+        "match": true
+      },
+      "MSE": {
+        "reference": 243.37048861678596,
+        "reconstructed": 243.37048861678593,
+        "abs_diff": 2.842170943040401e-14,
+        "match": true
+      },
+      "MAE": {
+        "reference": 9.981935242488827,
+        "reconstructed": 9.981935242488827,
+        "abs_diff": 0.0,
+        "match": true
+      },
+      "PHM08_RUL_Score": {
+        "reference": 71101.8736753274,
+        "reconstructed": 71101.8736753274,
+        "abs_diff": 0.0,
+        "match": true
+      }
+    },
+    "StackingEnsemble": {
+      "R2": {
+        "reference": 0.6792760989848554,
+        "reconstructed": 0.6792760989848554,
+        "abs_diff": 0.0,
+        "match": true
+      },
+      "MSE": {
+        "reference": 243.9466207485847,
+        "reconstructed": 243.9466207485847,
+        "abs_diff": 0.0,
+        "match": true
+      },
+      "MAE": {
+        "reference": 10.017686309740828,
+        "reconstructed": 10.017686309740828,
+        "abs_diff": 0.0,
+        "match": true
+      },
+      "PHM08_RUL_Score": {
+        "reference": 74096.76780411834,
+        "reconstructed": 74096.76780411834,
+        "abs_diff": 0.0,
+        "match": true
+      }
+    }
+  }
+}

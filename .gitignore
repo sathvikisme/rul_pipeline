@@ -10,6 +10,9 @@ __pycache__/
 venv/
 env/
 
+# CatBoost training-log side effect
+catboost_info/
+
 # OS / editor
 .DS_Store
 Thumbs.db

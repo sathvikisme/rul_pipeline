@@ -1,0 +1,24 @@
+{
+  "base_learners": [
+    "LightGBM",
+    "CatBoost",
+    "XGBoost",
+    "GradientBoosting",
+    "MLP"
+  ],
+  "meta_learner": "sklearn.linear_model.Ridge",
+  "meta_learner_alpha_grid": [
+    0.01,
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "meta_learner_training_data": "Genuine nested out-of-fold predictions of the 5 base learners from nested_cv.py's outer GroupKFold(5) -- NOT cross_val_predict (Phase 1's approach), and NOT raw features. For each outer fold k, the ridge meta-learner is trained ONLY on OOF rows from the other 4 outer folds (with its own alpha tuned by a further inner GroupKFold(3) on those rows) and evaluated on fold k's OOF rows -- a genuinely nested evaluation of the stacking ensemble itself, not just of the base learners feeding it.",
+  "zero_additional_base_model_fits": true,
+  "final_deployable_meta_learner_alpha": {
+    "alpha": 100.0
+  },
+  "final_deployable_meta_learner_note": "Fit on the FULL pooled OOF matrix (alpha tuned via GroupKFold(5) on that same matrix) -- an artifact for downstream use, not itself the nested-CV performance claim (see nested_stacking_metrics.csv for that).",
+  "random_seed": 42
+}
